@@ -4,3 +4,18 @@
   box-shadow: 3px 5px navajowhite;
   width: 400px;
 }
+
+.table {
+  border-collapse: collapse;
+  color: bisque;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+.negative-price{
+  color: red;
+}
+.center{
+  text-align: center;
+}
