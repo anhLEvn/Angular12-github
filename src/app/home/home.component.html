@@ -1,5 +1,24 @@
 <div class="test">
   <h3>Component Home </h3>
+
+  <input type="" value="{{name}}">
+  <br>
+  <input type="text" name="" id="" [value] = "name" title="this is {{name}}"/>
+  <br>
+  <input type="text" name="" id="" [(ngModel)] = "name" [title]=" 'this is' + name"/>
   <h4>Hello {{name}}</h4>
+  <br>
+  <input type="text" [(ngModel)] = "age">
+  <h3>Your age is {{age}}</h3>
+  <div *ngIf="age <= 18; then young; else old"> </div>
+    <ng-template #young>
+    <h2> You are too young! </h2>
+   </ng-template>
+  <ng-template #old>
+    <h2> You are too old! </h2>
+   </ng-template>
+  <!-- <h2 *ngIf="age > 18"> You are too old </h2>
+  <h2 *ngIf="age < 18"> You are too young </h2> -->
+  <button (click)="resetName()">Reset Name</button>
 </div>
 
