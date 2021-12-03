@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-home',
@@ -23,10 +24,17 @@ export class HomeComponent implements OnInit {
                     {city: 'Bà Rịa - Vũng Tàu', districts: ["Thành phố Vũng Tàu","Thị xã Bà Rịa","Thị xã Phú Mỹ",
                     "Huyện Châu Đức","Huyện Côn Đảo","Huyện Đất Đỏ","Huyện Long Điền","Huyện Tân Thành","Huyện Xuyên Mộc"] },
                           ]
-    constructor() { }
+
+  public counterHome = 0;
+  public counterPower = 0;
+    constructor(private common: CommonService) { }
 
   ngOnInit(): void {
     console.log('Cities: ', this.vietnamData);
+    this.counterHome = this.common.counter;
+    this.counterPower = this.common.power(this.counterHome);
+    this.common.counter++;
+
    }
 
    public districts: string[] = [];
