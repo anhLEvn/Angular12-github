@@ -1,12 +1,12 @@
 <div class="test">
   <h3>Component Home </h3>
 
-  <div *ngFor="let fruit of fruits; let i = index">
+  <!-- <div *ngFor="let fruit of fruits; let i = index">
     <li>{{i+1}}. {{fruit}}</li>
 
-  </div>
+  </div> -->
 
-  <table class="table">
+  <!-- <table class="table">
     <tr>
       <th>Numero</th>
       <th>Fruit Name</th>
@@ -21,10 +21,17 @@
       </td>
       <td class="center">
         <!-- *ngIf = "fruit.promotion" -->
-        <span >{{fruit.promotion | onSales | uppercase }}</span>    </td>
+        <!-- <span >{{fruit.promotion | onSales | uppercase }}</span>    </td>
     </tr>
-
-  </table>
-
+  </table> -->
+  City:
+  <select id="city" (change)="changeCity($event)">
+    <option *ngFor="let data of vietnamData" value="{{data.city}}">{{data.city}}</option>
+  </select>
+<br>
+District:
+<select id="district">
+  <option *ngFor="let district of districts" value="">{{district}}</option>
+</select>
 </div>
 
