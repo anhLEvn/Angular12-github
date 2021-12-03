@@ -17,10 +17,11 @@
       <td>{{i+1}}</td>
       <td>{{fruit.fruitName}}</td>
       <td class="center">
-        <span [ngClass]="{'negative-price':fruit.price < 0}">{{fruit.price}}</span>
+        <span [ngClass]="{'negative-price':fruit.price < 0}">{{fruit.price | currency:'EUR':'symbol':'1.2'}}</span>
       </td>
       <td class="center">
-        <span *ngIf = "fruit.promotion">On Sales!</span>    </td>
+        <!-- *ngIf = "fruit.promotion" -->
+        <span >{{fruit.promotion | onSales | uppercase }}</span>    </td>
     </tr>
 
   </table>
