@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { OnSalesPipe } from './on-sales.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HighlightDirective } from './Directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     AboutComponent,
     OnSalesPipe,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
