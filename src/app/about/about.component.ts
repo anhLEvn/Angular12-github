@@ -17,9 +17,10 @@ export class AboutComponent implements OnInit {
   constructor(private common: CommonService) { }
 
   ngOnInit(): void {
-    this.counterAbout = this.common.counter;
+    this.counterAbout = this.common.getCounter();
     this.counterPower = this.common.power(this.counterAbout);
-    this.common.counter ++;
+    let counter2 = this.common.getCounter() ;
+    counter2++;
   }
 
 }

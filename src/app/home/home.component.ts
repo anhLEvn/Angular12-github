@@ -31,9 +31,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('Cities: ', this.vietnamData);
-    this.counterHome = this.common.counter;
+    this.counterHome = this.common.getCounter();
     this.counterPower = this.common.power(this.counterHome);
-    this.common.counter++;
+    let counter2 = this.common.getCounter() ;
+    counter2++;
 
    }
 

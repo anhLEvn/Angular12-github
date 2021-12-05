@@ -4,11 +4,25 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CommonService {
-  public counter = 0;
+  private counter = 0;
 
   constructor() { }
 
   public power(a: number): number {
     return a * a;
+  }
+
+  public getCounter(): number {
+    return this.counter;
+  }
+
+  public setCounter(a: number){
+    this.counter = a;
+  }
+
+  public submitData(data: any): void{
+    console.log('Send data to server. Data = ', data);
+
+
   }
 }
